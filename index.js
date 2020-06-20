@@ -3,6 +3,8 @@
 // 🏡 Task 1: Variables
 /* Create variables for principal, interest rate, and years. Assign them the values 200000, 0.05, and 30 respectively. Create another value called name and give it the value of your own name.
  */
+
+// ANSWER
 // const principal = 200000;
 // const interestRate = 0.05;
 // const years = 30;
@@ -15,6 +17,7 @@
 (2) Create another variable called `periods` and give it the value of years*12.
 */
 
+// ANSWER
 // const monthlyInterestRate = interestRate / 12;
 // const periods = years * 12;
 
@@ -35,6 +38,7 @@ Hint #2: you'll need to use the `math` object for parts of this calculation!
 When your math is correct, monthlyRate will equal 1073.64
 */
 
+// ANSWER
 // const n1 = Math.pow(1 + monthlyInterestRate, 360);
 // const numerator = principal * (n1 * monthlyInterestRate);
 // const denominator = n1 - 1;
@@ -47,10 +51,35 @@ When your math is correct, monthlyRate will equal 1073.64
 If your name is `Oscar` mortgageCalculator() should return "Oscar, your monthly rate is 1073.64"
 */
 
-function mortgageCalculator() {
-  const principal = 200000;
-  const interestRate = 0.05;
-  const years = 30;
+// ANSWER
+// function mortgageCalculator() {
+//   const principal = 200000;
+//   const interestRate = 0.05;
+//   const years = 30;
+//   const name = "Jessica";
+
+//   const monthlyInterestRate = interestRate / 12;
+//   const periods = years * 12;
+
+//   const n1 = Math.pow(1 + monthlyInterestRate, 360);
+//   const numerator = principal * (n1 * monthlyInterestRate);
+//   const denominator = n1 - 1;
+//   const monthlyRate = numerator / denominator;
+
+//   console.log(`${name}, your monthly rate is ${monthlyRate}`);
+// }
+
+// mortgageCalculator();
+
+// 🏡 Task 4: Arguments and Parameters
+/* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
+
+For example,
+mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
+*/
+
+// ANSWER
+function mortgageCalculator(principal, interestRate, years) {
   const name = "Jessica";
 
   const monthlyInterestRate = interestRate / 12;
@@ -64,14 +93,7 @@ function mortgageCalculator() {
   console.log(`${name}, your monthly rate is ${monthlyRate}`);
 }
 
-mortgageCalculator();
-
-// 🏡 Task 4: Arguments and Parameters
-/* Substitute the variables in your functions for parameters such that you can substitute `P`, `I`, and `N` when you call the function.
-
-For example,
-mortgageCalculator(200000, 0.05, 30); <-- should return 1,073.64
-*/
+mortgageCalculator(200000, 0.05, 30);
 
 // 🏡 Task 5: Conditionals
 /* Add another paramter to your function called credit score. This parameter will be a number between 0 and 800 (a credit score).
