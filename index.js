@@ -111,17 +111,14 @@ function mortgageCalculator(principal, interestRate, years, creditScore) {
   const n1 = Math.pow(1 + monthlyInterestRate, 360);
   const numerator = principal * (n1 * monthlyInterestRate);
   const denominator = n1 - 1;
-  const monthlyRate = numerator / denominator;
+  let monthlyRate = numerator / denominator;
 
   if (creditScore > 740) {
-    // monthlyRate * 0.95;
-    console.log(`740`);
+    monthlyRate = monthlyRate * 0.95;
   } else if (creditScore < 660) {
-    // monthlyRate * 1.05;
-    console.log(`660`);
+    monthlyRate = monthlyRate * 1.05;
   } else {
-    // monthlyRate * 1;
-    console.log(`< 740, > 660`);
+    monthlyRate = monthlyRate * 1;
   }
 
   console.log(`${name}, your monthly rate is ${monthlyRate}`);
