@@ -156,7 +156,9 @@ function variableInterestRate(principal, interestRate, years) {
     monthlyRate = Math.round(monthlyRate);
 
     console.log(`
-    ${name}, with an interest rate of ${i}, your monthly rate is ${monthlyRate}`);
+    ${name}, with an interest rate of ${i.toFixed(
+      3
+    )}, your monthly rate is ${monthlyRate}`);
   }
 }
 
