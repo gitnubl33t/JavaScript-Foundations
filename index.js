@@ -153,7 +153,14 @@ function variableInterestRate(principal, interestRate, years) {
   const denominator = n1 - 1;
   let monthlyRate = numerator / denominator;
   console.log(`${name}, your monthly rate is ${monthlyRate}`);
+
+  variableInterestRate = (principal, interestRate, years) => {
+    for (interestRate = 0; interestRate < 10; interestRate = i + 0.5);
+    console.log(`${name}, with an interest rate of ${interestRate}, your monthly rate is ${variableInterestRate}';)
+  }
 }
+
+
 
 variableInterestRate(200000, 0.04, 30);
 
