@@ -145,18 +145,18 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 // ANSWER
 
 function variableInterestRate(principal, interestRate, years) {
-  const name = "Jessica";
-  let monthlyInterestRate = interestRate / 12;
-  const periods = years * 12;
-  const n1 = Math.pow(1 + monthlyInterestRate, 360);
-  const numerator = principal * (n1 * monthlyInterestRate);
-  const denominator = n1 - 1;
-  let monthlyRate = numerator / denominator;
-  monthlyRate = Math.round(monthlyRate);
-
   for (let i = interestRate - 0.02; i <= interestRate + 0.02; i = i + 0.005) {
+    const name = "Jessica";
+    let monthlyInterestRate = i / 12;
+    const periods = years * 12;
+    const n1 = Math.pow(1 + monthlyInterestRate, 360);
+    const numerator = principal * (n1 * monthlyInterestRate);
+    const denominator = n1 - 1;
+    let monthlyRate = numerator / denominator;
+    monthlyRate = Math.round(monthlyRate);
+
     console.log(`
-    ${name}, with an interest rate of ${interestRate}, your monthly rate is ${monthlyRate}`);
+    ${name}, with an interest rate of ${i}, your monthly rate is ${monthlyRate}`);
   }
 }
 
